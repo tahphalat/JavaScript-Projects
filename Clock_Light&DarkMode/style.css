@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+}
+
+/* เก็บสีของ light and dark mode */
+:root{
+    --primary-color:#000;
+    --secondary-color:#fff;
+}
+
+body{
+    /* วางให้อยู่ตรงกลาง */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* ซ่อน เพื่อกันการล้นออกนอกเขต */
+    overflow: hidden;
+    margin: 0;
+}
+/* ปรับขนาด */
+.time{
+    font-size: 60px;
+}
+
+.toggle{
+    cursor: pointer;
+
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border: 0;
+    /* ทำให้ปุ่มโค้ง */
+    border-radius: 4px;
+    padding: 8px 12px;
+
+    /* กำหนด position ปุ่ม */
+    position: absolute;
+    top: 520px;
+}
+html.dark{
+    --primary-color:#fff;
+    --secondary-color:#333;
+}
+html.dark{
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+/* สร้าง animation */
+html{
+    transition: all 0.4s ease-in;
+} 
